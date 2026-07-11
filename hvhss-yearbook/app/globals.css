@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ivory text-ink dark:bg-navy dark:text-ivory font-body antialiased transition-colors duration-500;
+}
+
+h1, h2, h3, h4, h5 {
+  @apply font-display;
+}
+
+/* Visible keyboard focus, everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #C9A54B;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Signature element: the Horizon Line ---- */
+/* A thin gold line, like the edge of a sunrise, that sits under section
+   headings. A small "sun" travels along it on scroll-into-view. */
+.horizon-line {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C9A54B, transparent);
+  margin-top: 1.25rem;
+  overflow: visible;
+}
+
+.horizon-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #C9A54B;
+  box-shadow: 0 0 10px 2px rgba(201, 165, 75, 0.6);
+  transform: translateY(-50%);
+  animation: travel-horizon 2.6s ease-in-out infinite;
+}
+
+@keyframes travel-horizon {
+  0% { left: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.horizon-line.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Custom scrollbar, quiet */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 165, 75, 0.4);
+  border-radius: 999px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}

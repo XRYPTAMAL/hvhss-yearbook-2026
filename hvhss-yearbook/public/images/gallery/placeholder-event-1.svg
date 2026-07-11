@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="610" viewBox="0 0 900 610">
+  <defs>
+    <linearGradient id="e1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12161d"/>
+      <stop offset="100%" stop-color="#1c1410"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="610" fill="url(#e1)"/>
+  <circle cx="450" cy="335.5" r="70" fill="#C9A54B" opacity="0.55"/>
+  <rect x="0" y="378.2" width="900" height="2" fill="#C9A54B" opacity="0.4"/>
+  <text x="450" y="570" font-family="Georgia, serif" font-size="28" fill="#E4CD8A" text-anchor="middle" opacity="0.85">School Reopening</text>
+</svg>
