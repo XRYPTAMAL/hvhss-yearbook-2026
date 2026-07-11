@@ -22,7 +22,7 @@ export default function ContactPage() {
             Email
           </p>
           <a
-            href="mailto:batch2026@hvhssvellanad.edu"
+            href="mailto:aamaldev@gmail.com"
             className="mt-1 block text-sm text-ink dark:text-ivory hover:text-gold break-all"
           >
             batch2026@hvhssvellanad.edu
@@ -33,7 +33,7 @@ export default function ContactPage() {
           <p className="mt-3 text-xs uppercase tracking-widest text-ink/50 dark:text-ivory/50">
             School Office
           </p>
-          <p className="mt-1 text-sm text-ink dark:text-ivory">+91 000 000 0000</p>
+          <p className="mt-1 text-sm text-ink dark:text-ivory">+91 9746761731</p>
         </div>
         <div className="rounded-2xl border border-ink/10 dark:border-ivory/10 p-6 text-center">
           <MapPin className="mx-auto text-gold" size={20} />
