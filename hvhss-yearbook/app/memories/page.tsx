@@ -2,7 +2,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import { memories } from "@/data/memories";
 
-export const metadata = { title: "Memory Wall — GKS Govt. V&HSS Batch of 2026" };
+export const metadata = { title: "Memory Wall — HVHSS Vellanad Batch of 2026" };
 
 const rotations = ["-rotate-2", "rotate-1", "-rotate-1", "rotate-2", "rotate-0"];
 

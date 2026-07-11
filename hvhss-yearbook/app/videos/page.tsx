@@ -1,7 +1,7 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 
-export const metadata = { title: "Videos — GKS Govt. V&HSS Batch of 2026" };
+export const metadata = { title: "Videos — HVHSS Vellanad Batch of 2026" };
 
 // Replace the ids below with real YouTube video ids (the part after "v=" in the URL).
 const videos = [

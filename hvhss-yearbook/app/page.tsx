@@ -67,7 +67,7 @@ export default function HomePage() {
             variants={item}
             className="font-display text-4xl font-semibold leading-tight text-ink dark:text-ivory sm:text-6xl lg:text-7xl text-balance"
           >
-            GKS Govt. V&HSS
+            HVHSS Vellanad
           </motion.h1>
 
           <motion.h2
@@ -157,7 +157,7 @@ export default function HomePage() {
               "We didn't know we were making memories, we just knew we were having fun."
             </p>
             <p className="mt-6 text-xs uppercase tracking-[0.3em] text-ivory/50">
-              — 10B, GKS Govt. V&HSS
+              — 10B, HVHSS Vellanad
             </p>
           </AnimatedSection>
         </div>
