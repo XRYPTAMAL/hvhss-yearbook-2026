@@ -28,12 +28,12 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "HVHSS Vellanad — Batch of 2026",
+  title: "GKS Govt. V&HSS — Batch of 2026",
   description:
-    "A digital yearbook for the Class 10 Batch of 2026, HVHSS Vellanad. Students, teachers, events, memories, and everything worth keeping.",
-  keywords: ["HVHSS Vellanad", "Batch of 2026", "Digital Yearbook", "10B"],
+    "A digital yearbook for the Class 10 Batch of 2026, GKS Govt. V&HSS. Students, teachers, events, memories, and everything worth keeping.",
+  keywords: ["GKS Govt. V&HSS", "Batch of 2026", "Digital Yearbook", "10B"],
   openGraph: {
-    title: "HVHSS Vellanad — Batch of 2026",
+    title: "GKS Govt. V&HSS — Batch of 2026",
     description: "A digital yearbook for the Class 10 Batch of 2026.",
     type: "website"
   }
