@@ -4,7 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import GraduationMoment from "@/components/GraduationMoment";
 import { events } from "@/data/events";
 
-export const metadata = { title: "Events — HVHSS Vellanad Batch of 2026" };
+export const metadata = { title: "Events — GKS Govt. V&HSS Batch of 2026" };
 
 export default function EventsPage() {
   return (

@@ -1,4 +1,4 @@
-# HVHSS Vellanad — Batch of 2026 · Digital Yearbook
+# GKS Govt. V&HSS — Batch of 2026 · Digital Yearbook
 
 A premium, emotional, Apple-inspired digital yearbook built with Next.js 14
 (App Router), TypeScript, Tailwind CSS, and Framer Motion.
@@ -61,7 +61,7 @@ toggle in the navbar will play it.
 - Video page with YouTube embeds
 - Dark/light mode (persisted), scroll progress bar, back-to-top button
 - Confetti burst on the graduation moment in the Events timeline
-- Hidden Easter egg — click the "HVHSS · 10B" logo 5 times
+- Hidden Easter egg — click the "GKS · 10B" logo 5 times
 - SEO metadata, sitemap.xml, robots.txt
 - Fully responsive, keyboard-focus visible, respects reduced-motion
 

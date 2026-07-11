@@ -24,9 +24,9 @@ export default function EasterEggLogo() {
         href="/"
         onClick={handleClick}
         className="font-display text-sm font-semibold tracking-[0.2em] text-ink dark:text-ivory"
-        aria-label="HVHSS Vellanad home"
+        aria-label="GKS Govt. V&HSS home"
       >
-        HVHSS
+        GKS
         <span className="text-gold"> · </span>
         10B
       </Link>
@@ -52,7 +52,7 @@ export default function EasterEggLogo() {
                 Thank you for being part of our journey ❤️
               </p>
               <p className="mt-4 text-xs uppercase tracking-widest text-ink/50 dark:text-ivory/50">
-                Batch of 2026 · HVHSS Vellanad
+                Batch of 2026 · GKS Govt. V&HSS
               </p>
             </motion.div>
           </motion.div>

@@ -1,7 +1,7 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 
-export const metadata = { title: "About — HVHSS Vellanad Batch of 2026" };
+export const metadata = { title: "About — GKS Govt. V&HSS Batch of 2026" };
 
 export default function AboutPage() {
   return (
@@ -16,7 +16,7 @@ export default function AboutPage() {
 
       <AnimatedSection delay={0.15} className="mt-14 space-y-6 text-ink/80 dark:text-ivory/80 leading-relaxed">
         <p>
-          HVHSS Vellanad has watched a lot of batches walk through its gates. This one — Class
+          GKS Govt. V&HSS has watched a lot of batches walk through its gates. This one — Class
           10B, Batch of 2026 — is ours. This site is our attempt to keep a little bit of it,
           before schedules and cities and new routines quietly start to blur the edges.
         </p>

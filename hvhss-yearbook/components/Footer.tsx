@@ -6,9 +6,9 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
         <div className="flex flex-col items-center gap-4 text-center">
           <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gold/40">
-            <span className="font-display text-sm font-semibold text-gold">HV</span>
+            <span className="font-display text-sm font-semibold text-gold">GK</span>
           </div>
-          <p className="font-display text-lg text-ink dark:text-ivory">HVHSS Vellanad</p>
+          <p className="font-display text-lg text-ink dark:text-ivory">GKS Govt. V&HSS</p>
           <p className="text-xs uppercase tracking-[0.3em] text-gold">Batch of 2026</p>
 
           <div className="horizon-line centered" />
@@ -24,7 +24,7 @@ export default function Footer() {
             Made with ❤️ by Amal Dev A
           </p>
           <p className="text-[11px] text-ink/40 dark:text-ivory/40">
-            © {new Date().getFullYear()} HVHSS Vellanad, Batch of 2026. All memories reserved.
+            © {new Date().getFullYear()} GKS Govt. V&HSS, Batch of 2026. All memories reserved.
           </p>
         </div>
       </div>

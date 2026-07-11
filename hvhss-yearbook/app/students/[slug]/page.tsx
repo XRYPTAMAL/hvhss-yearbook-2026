@@ -13,7 +13,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   const student = getStudentBySlug(params.slug);
   if (!student) return {};
   return {
-    title: `${student.fullName} — HVHSS Vellanad Batch of 2026`,
+    title: `${student.fullName} — GKS Govt. V&HSS Batch of 2026`,
     description: student.messageToFriends
   };
 }

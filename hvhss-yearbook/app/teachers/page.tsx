@@ -3,7 +3,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import { teachers } from "@/data/teachers";
 
-export const metadata = { title: "Teachers — HVHSS Vellanad Batch of 2026" };
+export const metadata = { title: "Teachers — GKS Govt. V&HSS Batch of 2026" };
 
 export default function TeachersPage() {
   return (

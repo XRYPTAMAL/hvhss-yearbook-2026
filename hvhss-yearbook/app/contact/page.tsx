@@ -2,7 +2,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import { Mail, MapPin, Phone } from "lucide-react";
 
-export const metadata = { title: "Contact — HVHSS Vellanad Batch of 2026" };
+export const metadata = { title: "Contact — GKS Govt. V&HSS Batch of 2026" };
 
 export default function ContactPage() {
   return (
