@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <defs>
+    <linearGradient id="e5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10161a"/>
+      <stop offset="100%" stop-color="#221a12"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="650" fill="url(#e5)"/>
+  <circle cx="450" cy="357.50000000000006" r="70" fill="#C9A54B" opacity="0.55"/>
+  <rect x="0" y="403.0" width="900" height="2" fill="#C9A54B" opacity="0.4"/>
+  <text x="450" y="610" font-family="Georgia, serif" font-size="28" fill="#E4CD8A" text-anchor="middle" opacity="0.85">Farewell</text>
+</svg>
