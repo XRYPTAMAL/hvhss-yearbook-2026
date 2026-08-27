@@ -41,7 +41,22 @@ export default function EventsPage() {
                   <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink/70 dark:text-ivory/70">
                     {event.description}
                   </p>
-                  {event.image && (
+                  
+                  {/* Show multiple images if available */}
+                  {event.images && event.images.length > 0 ? (
+                    <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-3">
+                      {event.images.map((img, idx) => (
+                        <div key={idx} className="relative aspect-square overflow-hidden rounded-lg border border-ink/10 dark:border-ivory/10">
+                          <Image
+                            src={img}
+                            alt={`${event.title} ${idx + 1}`}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ) : event.image ? (
                     <div className="relative mt-5 aspect-[16/9] w-full max-w-md overflow-hidden rounded-xl border border-ink/10 dark:border-ivory/10">
                       <Image
                         src={event.image}
@@ -50,7 +65,7 @@ export default function EventsPage() {
                         className="object-cover"
                       />
                     </div>
-                  )}
+                  ) : null}
                 </div>
               </div>
             );
