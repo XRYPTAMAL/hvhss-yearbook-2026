@@ -71,11 +71,11 @@ export default function GalleryModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex flex-col animate-fadeIn"
+      className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex flex-col animate-fadeIn"
       onClick={onClose}
     >
       {/* Header with Download and Close */}
-      <div className="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent px-6 py-4 flex items-center justify-between">
+      <div className="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/90 to-transparent px-6 py-4 flex items-center justify-between">
         <h2 className="text-white font-semibold text-lg">{title}</h2>
         <div className="flex items-center gap-4">
           <button
@@ -102,33 +102,40 @@ export default function GalleryModal({
 
       {/* Main Image Container */}
       <div
-        className="flex-1 flex items-center justify-center relative overflow-hidden"
+        className="flex-1 flex items-center justify-center relative overflow-hidden pt-16"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Previous Image (for side-by-side effect) */}
-        <div className="absolute left-0 top-0 h-full w-1/4 hidden lg:flex items-center justify-center opacity-30 pointer-events-none">
+        <div className="absolute left-0 top-0 h-full w-1/5 hidden lg:flex items-center justify-center opacity-20 pointer-events-none overflow-hidden">
           <img
             src={images[(currentIndex - 1 + images.length) % images.length]}
             alt="Previous"
-            className="h-full w-full object-contain"
+            className="h-full w-full object-cover"
           />
         </div>
 
         {/* Current Image - Main */}
-        <div className={`flex items-center justify-center h-full w-full lg:w-1/2 px-4 transition-all duration-500 ${isSliding ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
+        <div
+          className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${
+            isSliding ? "opacity-0 scale-95" : "opacity-100 scale-100"
+          }`}
+        >
           <img
             src={currentImage}
             alt={`${title} ${currentIndex + 1}`}
-            className="max-h-full max-w-full object-contain rounded-lg shadow-2xl"
+            className="max-h-[90vh] max-w-[90vw] w-auto h-auto object-contain"
+            onError={(e) => {
+              console.error("Image failed to load:", currentImage);
+            }}
           />
         </div>
 
         {/* Next Image (for side-by-side effect) */}
-        <div className="absolute right-0 top-0 h-full w-1/4 hidden lg:flex items-center justify-center opacity-30 pointer-events-none">
+        <div className="absolute right-0 top-0 h-full w-1/5 hidden lg:flex items-center justify-center opacity-20 pointer-events-none overflow-hidden">
           <img
             src={images[(currentIndex + 1) % images.length]}
             alt="Next"
-            className="h-full w-full object-contain"
+            className="h-full w-full object-cover"
           />
         </div>
 
@@ -155,15 +162,15 @@ export default function GalleryModal({
       </div>
 
       {/* Counter */}
-      <div className="absolute bottom-32 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur px-6 py-2 rounded-full">
+      <div className="absolute bottom-32 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur px-6 py-2 rounded-full z-10">
         <span className="text-white font-semibold">
           {currentIndex + 1} / {images.length}
         </span>
       </div>
 
       {/* Thumbnail Strip with smooth scroll */}
-      <div className="bg-gradient-to-t from-black/90 to-transparent px-6 py-6 overflow-x-auto">
-        <div className="flex gap-3 pb-2">
+      <div className="relative bg-gradient-to-t from-black/95 to-transparent px-6 py-6 max-h-32 z-10">
+        <div className="flex gap-3 pb-2 overflow-x-auto scrollbar-hide">
           {images.map((img, idx) => (
             <button
               key={idx}
@@ -175,7 +182,7 @@ export default function GalleryModal({
                   setIsSliding(false);
                 }, 300);
               }}
-              className={`relative h-24 w-24 flex-shrink-0 rounded-lg overflow-hidden border-3 transition-all duration-300 transform hover:scale-110 ${
+              className={`relative h-24 min-w-24 w-24 flex-shrink-0 rounded-lg overflow-hidden border-3 transition-all duration-300 transform hover:scale-110 ${
                 idx === currentIndex
                   ? "border-gold shadow-lg shadow-gold/50 scale-110"
                   : "border-white/30 hover:border-white/60 opacity-75 hover:opacity-100"
@@ -185,6 +192,7 @@ export default function GalleryModal({
                 src={img}
                 alt={`Thumbnail ${idx + 1}`}
                 className="h-full w-full object-cover"
+                loading="lazy"
               />
             </button>
           ))}
@@ -202,6 +210,13 @@ export default function GalleryModal({
         }
         .animate-fadeIn {
           animation: fadeIn 0.3s ease-in-out;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </div>
